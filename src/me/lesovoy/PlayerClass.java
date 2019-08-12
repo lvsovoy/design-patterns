@@ -2,18 +2,19 @@ package me.lesovoy;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 public enum PlayerClass {
     WARRIOR(2, Arrays.asList(
-            new Ability("Kick", 3,1),
+            new Ability("Kick", 3, 1),
             new Ability("Smash", 5, 3),
             new Ability("Obliterate", 8, 5))),
     MAGE(5, Arrays.asList(
-            new Ability("Fireball", 3,3),
+            new Ability("Fireball", 3, 3),
             new Ability("Fire Storm", 6, 5),
             new Ability("Throw Magma", 9, 8))),
     PALADIN(4, Arrays.asList(
-            new Ability("Prayer", 4,1),
+            new Ability("Prayer", 4, 1),
             new Ability("Holy Hammer", 5, 3),
             new Ability("Inquisition", 7, 5)));
 
@@ -23,5 +24,10 @@ public enum PlayerClass {
     PlayerClass(int regen, List<Ability> abilities) {
         this.regen = regen;
         this.abilities = abilities;
+    }
+
+    public static PlayerClass getRandomClass() {
+        Random random = new Random();
+        return values()[random.nextInt(values().length)];
     }
 }

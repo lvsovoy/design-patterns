@@ -30,6 +30,10 @@ public class Player {
     }
 
     public String playerInfo(){
-        return this.playerClass + " " + this.name + "|| \thealth:" + this.getStats().health + " \t || energy:" + this.getStats().energy;
+        return this.playerClass + " \t" + this.name + " || \thealth:" + this.getStats().health + " \t|| energy:" + this.getStats().energy;
+    }
+
+    public boolean hasPassedOut() {
+        return stats.health <= 0;
     }
 }

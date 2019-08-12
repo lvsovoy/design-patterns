@@ -5,7 +5,7 @@ import java.util.Optional;
 public class PlayerBuilder {
     String name;
     PlayerClass playerClass;
-    Optional<Stats> stats = Optional.empty();
+  Stats stats;
 
     public PlayerBuilder() {
     }
@@ -21,7 +21,7 @@ public class PlayerBuilder {
     }
 
     public PlayerBuilder withStats(Stats stats) {
-        this.stats = Optional.of(stats);
+        this.stats = stats;
         return this;
     }
 
@@ -29,8 +29,7 @@ public class PlayerBuilder {
         Player player = new Player();
         player.setName(name);
         player.setPlayerClass(playerClass);
-        player.setStats(Optional.ofNullable(stats)
-                .orElse(Optional.of(new Stats(100,5))).get());
+        player.setStats(new Stats(100,5));
         return player;
     }
 
