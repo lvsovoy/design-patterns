@@ -6,9 +6,6 @@ public class PlayerBuilder {
     PlayerClass playerClass;
     Stats stats;
 
-    public PlayerBuilder() {
-    }
-
     public PlayerBuilder withName(String name) {
         this.name = name;
         return this;

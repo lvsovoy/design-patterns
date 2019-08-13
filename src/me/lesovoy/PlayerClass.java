@@ -27,18 +27,18 @@ public enum PlayerClass {
     int regen;
     List<Ability> abilities;
 
+    private static Random random = new Random();
+
     PlayerClass(int regen, List<Ability> abilities) {
         this.regen = regen;
         this.abilities = abilities;
     }
 
     public static PlayerClass getRandomClass() {
-        Random random = new Random();
         return values()[random.nextInt(values().length)];
     }
 
     public Ability getRandomAbility() {
-        Random random = new Random();
         return abilities.get(random.nextInt(abilities.size()));
     }
 }

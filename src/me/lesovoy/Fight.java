@@ -69,8 +69,8 @@ public class Fight {
     }
 
     private static boolean noonePassedOut() {
-        return !players.stream()
-                .anyMatch(player -> player.hasPassedOut());
+        return players.stream()
+                .noneMatch(player -> player.hasPassedOut());
     }
 
     private static void castAbility(Player player, Player victim) {
@@ -84,5 +84,8 @@ public class Fight {
 
     private static void regenEnergy(Player player) {
         player.getStats().energy += player.getPlayerClass().regen;
+    }
+
+    private Fight() {
     }
 }
