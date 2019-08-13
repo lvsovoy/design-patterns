@@ -1,9 +1,9 @@
 package me.lesovoy;
 
 public class Player {
-    String name;
-    PlayerClass playerClass;
-    Stats stats;
+    private String name;
+    private PlayerClass playerClass;
+    private Stats stats;
 
     public String getName() {
         return name;
@@ -34,6 +34,10 @@ public class Player {
     }
 
     public boolean hasPassedOut() {
-        return stats.health <= 0;
+        return this.stats.health <= 0;
+    }
+
+    public boolean canCast(Ability ability) {
+        return this.stats.energy >= ability.consumption;
     }
 }

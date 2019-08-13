@@ -1,11 +1,10 @@
 package me.lesovoy;
 
-import java.util.Optional;
-
+//creational - builder
 public class PlayerBuilder {
     String name;
     PlayerClass playerClass;
-  Stats stats;
+    Stats stats;
 
     public PlayerBuilder() {
     }
@@ -29,9 +28,7 @@ public class PlayerBuilder {
         Player player = new Player();
         player.setName(name);
         player.setPlayerClass(playerClass);
-        player.setStats(new Stats(100,5));
+        player.setStats(new Stats(30, 2));
         return player;
     }
-
-
 }
