@@ -1,10 +1,10 @@
-package me.lesovoy;
+package me.lesovoy.player;
 
 public class Ability {
-    String name;
-    int effect;
-    int consumption;
-    AbilityType type;
+    public String name;
+    public int effect;
+    public int consumption;
+    public AbilityType type;
 
     public Ability(String name, int effect, int consumption, AbilityType type) {
         this.name = name;

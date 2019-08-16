@@ -1,8 +1,8 @@
-package me.lesovoy;
+package me.lesovoy.player;
 
 public class Stats {
-    int health;
-    int energy;
+    public int health;
+    public int energy;
 
     public int getHealth() {
         return health;

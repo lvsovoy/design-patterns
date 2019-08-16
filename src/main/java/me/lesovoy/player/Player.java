@@ -1,9 +1,12 @@
-package me.lesovoy;
+package me.lesovoy.player;
 
 public class Player {
     private String name;
     private PlayerClass playerClass;
     private Stats stats;
+
+    public Player() {
+    }
 
     public String getName() {
         return name;
@@ -29,7 +32,7 @@ public class Player {
         this.stats = stats;
     }
 
-    public String playerInfo(){
+    public String playerInfo() {
         return this.playerClass + " \t" + this.name + " || \thealth:" + this.getStats().health + " \t|| energy:" + this.getStats().energy;
     }
 
@@ -38,6 +41,6 @@ public class Player {
     }
 
     public boolean canCast(Ability ability) {
-        return this.stats.energy >= ability.consumption;
+        return ability.type.equals(AbilityType.ENERGY_REGEN) || this.stats.energy >= ability.consumption;
     }
 }

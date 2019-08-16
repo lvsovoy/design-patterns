@@ -1,4 +1,7 @@
-package me.lesovoy;
+package me.lesovoy.player;
+
+import me.lesovoy.player.Ability;
+import me.lesovoy.player.Player;
 
 //behavioral - state
 public enum AbilityType {

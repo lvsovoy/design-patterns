@@ -1,4 +1,4 @@
-package me.lesovoy;
+package me.lesovoy.player;
 
 //creational - builder
 public class PlayerBuilder {
